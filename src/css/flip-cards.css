@@ -1,0 +1,62 @@
+.lp-flip-cards {
+	max-width: var(--wp--style--global--content-size);
+	margin: 0 auto;
+}
+
+.lp-flip-cards .wp-block-post-template .wp-block-post .lp-flip-card {
+	perspective: 1000px;
+	height: 320px;
+}
+
+.lp-flip-card:hover .lp-flip-card__inner {
+	transform: rotateY(180deg);
+}
+
+.lp-flip-cards .lp-flip-card .lp-flip-card__inner {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.lp-flip-cards .wp-block-post-template .wp-block-post .wp-block-columns .lp-flip-cards__front,
+.lp-flip-cards .wp-block-post-template .wp-block-post .wp-block-columns .lp-flip-cards__back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.lp-flip-cards .wp-block-post-template .wp-block-post .wp-block-columns .lp-flip-cards__front figure {
+	height: 100%;
+}
+
+.lp-flip-cards .wp-block-post-template .wp-block-post .wp-block-columns .lp-flip-cards__front figure img {
+	object-fit: cover;
+	height: 100%;
+}
+
+.lp-flip-cards .wp-block-post-template .wp-block-post .wp-block-columns .lp-flip-cards__back {
+	background-color: var(--wp--preset--color--primary);
+	color: white;
+	transform: rotateY(180deg);
+}
+
+.lp-flip-cards .lp-flip-cards__back h2 a {
+	padding: 24px 8px 0;
+	font-size: 22px;
+}
+
+.lp-flip-cards .lp-flip-cards__back .wp-block-post-date,
+.lp-flip-cards .lp-flip-cards__back .wp-block-post-author {
+    padding: 0 8px;
+    margin-top: 0;
+}
+
+.lp-flip-cards .lp-flip-cards__back .wp-block-post-excerpt {
+	padding: 0 8px;
+}
